@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Activity Mannager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="Responsive-Event-Calendar-Date-Picker-jQuery-Plugin-Monthly/css/monthly.css"/>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="Responsive-Event-Calendar-Date-Picker-jQuery-Plugin-Monthly/js/monthly.js"></script>
+
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      #divCalander,#divAllTasks{
+        display: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: dodgerblue;"
+    >
+      <a class="navbar-brand" href="#">Activity Mannager</a>
+    </nav>
+
+    <div class="row">
+      <!-- showtask -->
+      <div
+        class="col-2 mt-2 border-primary border-right"
+        style="height: 500px;"
+      >
+        <div
+          class="nav pl-2 flex-column nav-pills"
+          id="pillsTab"
+          role="tablist"
+          aria-orientation="vertical"
+        >
+          <a
+            href="#"
+            class="nav-link active"
+            id="planTab"
+            data-toogle="pill"
+            role="tab"
+            >Plan your day</a
+          >
+          <a
+            href="#"
+            class="nav-link "
+            id="allTasksTab"
+            data-toogle="pill"
+            role="tab"
+            >All Tasks</a
+          >
+          <a
+            href="#"
+            class="nav-link"
+            id="calanderTab"
+            data-toogle="pill"
+            role="tab"
+            >Calander</a
+          >
+        </div>
+      </div>
+      <div class="col-4 mt-2 border-primary  border-right" id="divTaskForm">
+        <div class="container">
+          <form class="form-group">
+            <label class="label form-control-plaintext">Task</label>
+            <input type="text" class="form-control" id="taskInput" />
+            <label class="label form-control-plaintext">Status</label>
+            <select class="form-control" name="status" id="statusInput">
+              <option value="pending">Pending</option>
+              <option selected value="Inprogress">Inprogress</option>
+              <option value="Completed">Completed</option>
+            </select>
+            <label class="label form-control-plaintext">Priority</label>
+            <select class="form-control" name="priority" id="priorityInput">
+              <option selected value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+            <br />
+            <input
+              type="date"
+              class="form-control"
+              id="planDayDate"
+              name="planDaydate"
+            />
+            <br />
+            <button name="Save" id="saveBtn" class="btn-primary btn">
+              Save
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="col-6 mt-2  " id="divShowData">
+        <h3 class="h4 text-center text-primary">Existing Tasks</h3>
+        <div id="showTasks">
+
+        </div>
+      </div>
+      
+      <!-- All Tasks -->
+
+      <div class="col-9 mt-2" id="divAllTasks">
+        <h3 class="h4 text-center text-primary">All Tasks</h3>
+        <div class="container ">
+        <div id="showAllTaskData" class="ml-2">
+
+        </div>
+      </div>
+
+      </div>
+
+      <!-- Calander -->
+      <div class="col-9 mt-2" id="divCalander">
+        <h3 class="h4 text-center text-primary">Calander</h3>
+        
+        <div class="monthly" id="demo-1">
+          
+        </div>
+       
+
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+    <script src="switchTabs.js"></script>
+  </body>
+</html>
